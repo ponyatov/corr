@@ -20,9 +20,9 @@ dfmt_brace_style = otbs
 dfmt_space_after_keywords = true
 dfmt_keep_line_breaks = false
 
-# [*.{dub.json}]
-# indent_style = space
-# indent_size  = 4
+[dub.json]
+indent_style = space
+indent_size  = 4
 
 # Tab indentation (no size specified)
 [Makefile]
