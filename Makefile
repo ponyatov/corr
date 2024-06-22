@@ -1,6 +1,12 @@
 # var
 MODULE = $(nodir $(CURDIR))
 
+# dir
+CWD   = $(CURDIR)
+
+# tool
+CURL  = curl -L -o
+
 # src
 D += $(wildcard src/*.d)
 
@@ -15,4 +21,4 @@ all: bin/$(MODULE) $(NC)
 .PHONY: format
 format: tmp/format_d
 tmp/format_d: $(D)
-	dub run dfmt
+	dub run dfmt -- -i $? && touch $@
